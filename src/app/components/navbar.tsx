@@ -1,48 +1,55 @@
 'use client'
-import React,{useState,useEffect} from 'react';
-
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import clsx from 'clsx';
+import Button from './Button';
 
 const Navbar: React.FC = () => {
-    const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      if (window.scrollY > 50 && !scrolled) setScrolled(true);
+      if (window.scrollY <= 50 && scrolled) setScrolled(false);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrolled]);
 
-   return (
-    <div className='h-[1000px]'>
-   <nav
-      className={`fixed top-0 left-1/2 transform -translate-x-1/2 px-6 py-4 flex justify-between items-center transition-all duration-300 ease-in-out z-50 ${
-        scrolled
-          ? "w-3/5 mt-4 rounded-[20px] border border-gray-300 shadow-sm bg-white"
-          : "w-4/5 border-none bg-transparent"
-      }`}
-    >
-      <Link href='/' className="flex items-center gap-3">
-      <img src="/logo.png" alt="TripMates Logo" width="56" height="67" />
+  return (
+    <header>
+      <nav
+        className={clsx(
+          'fixed top-0 left-1/2 transform -translate-x-1/2 px-6 py-4 flex justify-between items-center transition-all duration-300 ease-in-out z-50',
+          scrolled
+            ? 'w-3/5 mt-4 rounded-[16px] border border-gray-300 shadow-sm bg-white'
+            : 'w-[90vw] border-none bg-transparent'
+        )}
+      >
+        {/* Logo & Brand */}
+        <Link href="/" className="flex items-center gap-3">
+          <Image src="/logo.png" alt="TripMates Logo" width={56} height={67} priority />
+          <h1 className="text-[#0C0C0C] text-3xl font-medium font-['DM_Serif_Display']">TripMates</h1>
+        </Link>
 
-        <h1 className="text-[#0C0C0C] text-3xl font-medium font-['DM_Serif_Display']">TripMates</h1>
-      </Link>
-      
-      <ul className="flex justify-between items-center gap-24 px-10 py-3.5 bg-white/34 backdrop-blur-lg">
-        <li><Link href='/' className="text-sm font-normal text-[#0E0E0E] opacity-70">Explore</Link></li>
-        <li><Link href='/' className="text-sm font-normal text-[#0E0E0E] opacity-70">How it Works</Link></li>
-        <li><Link href='/' className="text-sm font-normal text-[#0E0E0E] opacity-70">About</Link></li>
-      </ul>
-      
-      <button className="px-10 py-3 bg-blue-100 text-[#1979F3] rounded-full border border-white/10 backdrop-blur-lg text-sm font-medium">
-        Join As Creator
-      </button>
-    </nav>
-    </div>
+        {/* Navigation Links */}
+        <div className="w-[448px] h-12 px-[42px] py-[14px] opacity-70 bg-white/34 rounded-[69px] border border-white/[0.01] backdrop-blur-[28.8px] flex justify-center items-center gap-2">
+  <div className="flex-1 h-5 opacity-70 flex justify-between items-center">
+    {['Explore', 'How it Works', 'About'].map((item) => (
+      <div key={item} className="text-[#0E0E0E] text-sm font-medium font-['DM_Sans'] leading-[20.3px] tracking-[0.28px]">
+        {item}
+      </div>
+    ))}
+  </div>
+</div>
+
+
+        {/* Join Button */}
+        <Button variant="primary">Join as creator</Button>
+      </nav>
+    </header>
   );
 };
 
