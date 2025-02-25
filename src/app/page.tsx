@@ -7,7 +7,7 @@ import Landing from './components/landing';
 const TripMates: React.FC = () => {
   return (
     
-    <div>
+    <div className='bg-custom'>
     <Navbar/><div className='flex'><Landing /></div>
     </div>
     

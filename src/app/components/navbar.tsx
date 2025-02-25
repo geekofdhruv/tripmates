@@ -35,12 +35,12 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Navigation Links */}
-        <div className="w-[448px] h-12 px-[42px] py-[14px] opacity-70 bg-white/34 rounded-[69px] border border-white/[0.01] backdrop-blur-[28.8px] flex justify-center items-center gap-2">
+        <div className="w-[448px] h-12 px-[42px] py-[14px] bg-white/34 flex justify-center items-center gap-2">
   <div className="flex-1 h-5 opacity-70 flex justify-between items-center">
     {['Explore', 'How it Works', 'About'].map((item) => (
-      <div key={item} className="text-[#0E0E0E] text-sm font-medium font-['DM_Sans'] leading-[20.3px] tracking-[0.28px]">
+      <button key={item} className="text-[#0E0E0E] text-sm font-medium font-['DM_Sans'] hover:text-orange-600">
         {item}
-      </div>
+      </button>
     ))}
   </div>
 </div>

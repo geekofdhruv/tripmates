@@ -5,7 +5,7 @@ const HeroContent: React.FC = () => {
   return (
     <div className='flex py-40'>
     <div className="w-[900px] mt-16 px-40">
-      <h1 className="text-7xl font-['Affectionately_Yours'] leading-normal mb-3">
+      <h1 className="text-7xl font-affection leading-normal mb-3">
         Don't Just Follow, Travel With Them
       </h1>
       <p className="text-xl opacity-70 mb-8">
