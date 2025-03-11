@@ -1,10 +1,10 @@
 import React from 'react';
 import Button from './Button';
 
-const HeroContent: React.FC = () => {
+const HeroContent = () => {
   return (
-    <div className='flex py-40'>
-    <div className="w-[900px] mt-16 px-40">
+    <div className='flex mt-40'>
+    <div className="w-[40vw] mt-12 ml-40 mr-5">
       <h1 className="text-7xl font-affection leading-normal mb-3">
         Don't Just Follow, Travel With Them
       </h1>
@@ -16,7 +16,7 @@ const HeroContent: React.FC = () => {
         <Button variant="secondary">How It Works?</Button>
       </div>
     </div>
-     <img src="/Elements.png" alt="Tillustration" className='w-[538px h-[532px]'  />
+     <img src="/Elements.png" alt="Tillustration" className='w-[32vw] ml-5'  />
     </div>
   );
 };

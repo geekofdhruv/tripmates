@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           'fixed top-0 left-1/2 transform -translate-x-1/2 px-6 py-4 flex justify-between items-center transition-all duration-300 ease-in-out z-50',
           scrolled
             ? 'w-3/5 mt-4 rounded-[16px] border border-gray-300 shadow-sm bg-white'
-            : 'w-[90vw] border-none bg-transparent'
+            : 'w-[84vw] border-none bg-transparent'
         )}
       >
         {/* Logo & Brand */}
