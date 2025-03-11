@@ -14,7 +14,8 @@ export default {
       },
       fontSize: {
         '7xl': '76px',
-        'xl': '20px'
+        'xl': '20px',
+        '2xl': '36px'
       },
       fontFamily: {
         affection: ['Affectionately Yours', 'sans-serif'],

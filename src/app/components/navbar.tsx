@@ -28,13 +28,12 @@ const Navbar: React.FC = () => {
             : 'w-[84vw] border-none bg-transparent'
         )}
       >
-        {/* Logo & Brand */}
+
         <Link href="/" className="flex items-center gap-3">
           <Image src="/logo.png" alt="TripMates Logo" width={56} height={67} priority />
           <h1 className="text-[#0C0C0C] text-3xl font-medium font-['DM_Serif_Display']">TripMates</h1>
         </Link>
 
-        {/* Navigation Links */}
         <div className="w-[448px] h-12 px-[42px] py-[14px] bg-white/34 flex justify-center items-center gap-2">
   <div className="flex-1 h-5 opacity-70 flex justify-between items-center">
     {['Explore', 'How it Works', 'About'].map((item) => (
@@ -45,8 +44,6 @@ const Navbar: React.FC = () => {
   </div>
 </div>
 
-
-        {/* Join Button */}
         <Button variant="primary">Join as creator</Button>
       </nav>
     </header>
