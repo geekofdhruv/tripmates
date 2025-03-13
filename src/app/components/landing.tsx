@@ -16,7 +16,7 @@ const HeroContent = () => {
         <Button variant="secondary">How It Works?</Button>
       </div>
     </div>
-     <img src="/Elements.png" alt="Tillustration" className='w-[32vw] ml-5'  />
+     <img src="/Elements.png" alt="Tillustration" className='w-[32vw] ml-16'  />
     </div>
   );
 };

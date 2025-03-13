@@ -22,15 +22,15 @@ const Navbar: React.FC = () => {
     <header>
       <nav
         className={clsx(
-          'fixed top-0 left-1/2 transform -translate-x-1/2 px-6 py-4 flex justify-between items-center transition-all duration-300 ease-in-out z-50',
+          'fixed top-0 left-1/2 transform -translate-x-1/2 px-6 flex justify-between items-center transition-all duration-300 ease-in-out z-50',
           scrolled
-            ? 'w-3/5 mt-4 rounded-[16px] border border-gray-300 shadow-sm bg-white'
-            : 'w-[84vw] border-none bg-transparent'
+            ? 'w-3/5 mt-4 py-1 rounded-[16px] border border-gray-300 shadow-sm bg-white'
+            : 'w-[84vw] py-6 border-none bg-transparent'
         )}
       >
 
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo.png" alt="TripMates Logo" width={56} height={67} priority />
+          <Image src="/logo.png" alt="TripMates Logo" width={56} height={67} priority className={clsx(scrolled ? 'scale-75' : 'scale-100')} />
           <h1 className="text-[#0C0C0C] text-3xl font-medium font-['DM_Serif_Display']">TripMates</h1>
         </Link>
 

@@ -14,7 +14,7 @@ const HostingBox: React.FC<{ items: CardProps[] }> = ({ items }) => {
         How Hosting Works
       </h1>
 
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-2">
         {items.map((item, index) => (
           <div
             key={index}

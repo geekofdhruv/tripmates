@@ -9,7 +9,7 @@
     font-style: normal;
   }
 
-  .rectangleDiv {
+  /* .rectangleDiv {
     width: 100%;
     position: relative;
     backdrop-filter: blur(60px);
@@ -17,9 +17,9 @@
       radial-gradient(50% 50% at 50% 50%, rgba(253, 213, 76, 0.2), rgba(251, 216, 97, 0.2) 12.97%, rgba(249, 221, 126, 0.2) 30.82%, rgba(247, 225, 147, 0.2) 43.36%, rgba(240, 240, 240, 0.2)),
       radial-gradient(50% 50% at 50% 50%, rgba(249, 108, 136, 0.2), rgba(254, 254, 254, 0.2)), rgba(255, 255, 255, 0.44);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-sizing: border-box;
+    
 
-  }
+  } */
   
 
   
