@@ -45,5 +45,3 @@ const TripMates: React.FC = () => {
     
   );
 };
-
-export default TripMates;
