@@ -7,7 +7,7 @@ type TripMatesCardProps = {
   imageAlt: string;
 };
 
-const TripMatesCard = ({ title, description, imageSrc, imageAlt }: TripMatesCardProps) => {
+const TripMatesCard = ({ title, description, imageAlt }: TripMatesCardProps) => {
   return (
   
     <div className=" backdrop-blur-[32.4px] rounded-[36px] bg-white/30 border border-white box-border flex flex-col md:flex-col items-center justify-start p-8 gap-8">

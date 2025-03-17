@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import Image from 'next/image';
 
 const HeroContent = () => {
   return (
@@ -16,9 +17,11 @@ const HeroContent = () => {
           <Button variant="secondary">How It Works?</Button>
         </div>
       </div>
-      <img 
+      <Image 
         src="/Elements.png" 
         alt="Tillustration" 
+        width={537}
+        height={532}
         className="hidden md:block w-[32vw] ml-16 md:scale-[0.88] lg:scale-100"
       />
     </div>
