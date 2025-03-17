@@ -17,32 +17,40 @@ const descriptionText = "Host Your Trip with TripMates and connect with like-min
 
 const TripMates: React.FC = () => {
   return (
-<div>
-    <div className='rectangleDiv'>
-    <Navbar/><Landing />
-    <div className='pb-20'><Card/></div>
-    
-    </div>
-    <HostingBox items={items}/>
-    <div className="p-4 sm:p-8 md:p-16 gap-16 md:flex w-screen items-center justify-between bg-[#FBEBE2]">
+    <div>
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <div className="rectangleDiv">
+          <Navbar />
+        </div>
+      </div>
+      
+      
+      <div>
         
-        <TripMatesCard 
-          title="Host Your Trips"
-          description={descriptionText}
-          imageSrc="/Vector 4858.png"
-          imageAlt="Host illustration"
-        />
+        <div className="rectangleDiv"> 
+          <Landing />
+          <div className='pb-20'><Card/></div>
+        </div>
         
-        <TripMatesCard 
-          title="Sign up as Traveller"
-          description={descriptionText}
-          imageSrc="/Vector 4858.png"
-          imageAlt="Traveller illustration"
-        />
+        <HostingBox items={items}/>
         
+        <div className="p-4 sm:p-8 md:p-16 gap-16 md:flex w-screen items-center justify-between bg-[#FBEBE2]">
+          <TripMatesCard 
+            title="Host Your Trips"
+            description={descriptionText}
+            imageSrc="/Vector 4858.png"
+            imageAlt="Host illustration"
+          />
+          
+          <TripMatesCard 
+            title="Sign up as Traveller"
+            description={descriptionText}
+            imageSrc="/Vector 4858.png"
+            imageAlt="Traveller illustration"
+          />
+        </div>
       </div>
     </div>
-    
   );
 };
 

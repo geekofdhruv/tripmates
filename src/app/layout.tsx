@@ -6,7 +6,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="rectangleDiv w-screen">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

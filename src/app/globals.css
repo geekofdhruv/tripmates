@@ -9,17 +9,16 @@
     font-style: normal;
   }
 
-  /* .rectangleDiv {
-    width: 100%;
-    position: relative;
-    backdrop-filter: blur(60px);
-    background: radial-gradient(50% 50% at 50% 50%, rgba(64, 134, 244, 0.2), rgba(242, 242, 242, 0.2)),
-      radial-gradient(50% 50% at 50% 50%, rgba(253, 213, 76, 0.2), rgba(251, 216, 97, 0.2) 12.97%, rgba(249, 221, 126, 0.2) 30.82%, rgba(247, 225, 147, 0.2) 43.36%, rgba(240, 240, 240, 0.2)),
-      radial-gradient(50% 50% at 50% 50%, rgba(249, 108, 136, 0.2), rgba(254, 254, 254, 0.2)), rgba(255, 255, 255, 0.44);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  .rectangleDiv {
+    border: 1px solid rgba(255, 255, 255, 0.10);
+  background: radial-gradient(41.22% 41.21% at 48.09% 0%, rgba(64, 134, 244, 0.20) 0%, rgba(242, 242, 242, 0.20) 100%), 
+              radial-gradient(81.24% 74.42% at 90.73% 28.08%, rgba(253, 213, 76, 0.20) 0%, rgba(251, 216, 97, 0.20) 12.97%, rgba(249, 221, 126, 0.20) 30.82%, rgba(247, 225, 147, 0.20) 43.36%, rgba(240, 240, 240, 0.20) 100%), 
+              radial-gradient(93.42% 53.74% at 6.25% 68.51%, rgba(249, 108, 136, 0.20) 0%, rgba(254, 254, 254, 0.20) 100%), 
+              rgba(255, 255, 255, 0.44);
+  backdrop-filter: blur(30px);
     
 
-  } */
+  } 
   
 
   

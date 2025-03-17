@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
     <header>
       <nav
         className={clsx(
-          'fixed top-0 left-1/2 transform -translate-x-1/2 px-6 flex justify-between items-center transition-all duration-300 ease-in-out z-50',
+          'fixed top-0 left-0 right-0 mx-auto px-6 flex justify-between items-center transition-all duration-300 ease-in-out z-10000',
           scrolled
             ? 'w-4/5 md:w-4/5 mt-4 py-1 rounded-[16px] border border-gray-300 shadow-sm bg-white'
             : 'w-[84vw] py-6 border-none bg-transparent'
