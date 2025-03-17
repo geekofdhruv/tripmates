@@ -7,6 +7,7 @@ import Button from './Button';
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,34 +19,84 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrolled]);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header>
       <nav
         className={clsx(
           'fixed top-0 left-1/2 transform -translate-x-1/2 px-6 flex justify-between items-center transition-all duration-300 ease-in-out z-50',
           scrolled
-            ? 'w-3/5 mt-4 py-1 rounded-[16px] border border-gray-300 shadow-sm bg-white'
+            ? 'w-4/5 md:w-4/5 mt-4 py-1 rounded-[16px] border border-gray-300 shadow-sm bg-white'
             : 'w-[84vw] py-6 border-none bg-transparent'
         )}
       >
-
         <Link href="/" className="flex items-center gap-3">
           <Image src="/logo.png" alt="TripMates Logo" width={56} height={67} priority className={clsx(scrolled ? 'scale-75' : 'scale-100')} />
-          <h1 className="text-[#0C0C0C] text-3xl font-medium font-['DM_Serif_Display']">TripMates</h1>
+          <h1 className={clsx(
+            "font-medium font-['DM_Serif_Display'] hidden lg:block text-[#0C0C0C]",
+            scrolled ? 'text-xl' : 'text-3xl'
+          )}>
+            TripMates
+          </h1>
         </Link>
 
-        <div className="w-[448px] h-12 px-[42px] py-[14px] bg-white/34 flex justify-center items-center gap-2">
-  <div className="flex-1 h-5 opacity-70 flex justify-between items-center">
-    {['Explore', 'How it Works', 'About'].map((item) => (
-      <button key={item} className="text-[#0E0E0E] text-sm font-medium font-['DM_Sans'] hover:text-orange-600">
-        {item}
-      </button>
-    ))}
-  </div>
-</div>
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex w-[448px] h-12 px-[42px] py-[14px] bg-white/34 justify-center items-center gap-2">
+          <div className="flex-1 h-5 opacity-70 flex justify-between items-center">
+            {['Explore', 'How it Works', 'About'].map((item) => (
+              <button key={item} className="text-[#0E0E0E] text-sm font-medium font-['DM_Sans'] hover:text-orange-600">
+                {item}
+              </button>
+            ))}
+          </div>
+        </div>
 
-        <Button variant="primary">Join as creator</Button>
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden flex flex-col justify-center items-center w-8 h-8" 
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {!menuOpen ? (
+            <>
+              <span className="block w-5 h-0.5 bg-black mb-1"></span>
+              <span className="block w-5 h-0.5 bg-black mb-1"></span>
+              <span className="block w-5 h-0.5 bg-black"></span>
+            </>
+          ) : (
+            <span className="text-2xl">&times;</span>
+          )}
+        </button>
+
+        {/* Desktop CTA Button */}
+        <div className="hidden md:block">
+          <Button variant="primary">Join as creator</Button>
+        </div>
       </nav>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="fixed w-full bg-white z-40 pt-16 pb-4 px-6 shadow-md md:hidden">
+          <div className="flex flex-col gap-4">
+            {['Home', 'How it works?', 'About'].map((item) => (
+              <button 
+                key={item} 
+                className="text-[#0E0E0E] text-base font-medium font-['DM_Sans'] py-2 text-left hover:text-orange-600"
+                onClick={() => setMenuOpen(false)}
+              >
+                {item}
+              </button>
+            ))}
+            <div className="mt-4 flex flex-col gap-3">
+              <Button variant="secondary" >Join as a creator</Button>
+              <Button variant="primary" >Conatct us</Button>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

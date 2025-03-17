@@ -24,7 +24,7 @@ const TripMates: React.FC = () => {
     
     </div>
     <HostingBox items={items}/>
-    <div className="flex w-screen px-16 pt-16 gap-16 items-center justify-between bg-[#FBEBE2]">
+    <div className="p-4 sm:p-8 md:p-16 gap-16 md:flex w-screen items-center justify-between bg-[#FBEBE2]">
         
         <TripMatesCard 
           title="Host Your Trips"
