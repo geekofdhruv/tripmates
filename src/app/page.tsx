@@ -35,12 +35,13 @@ const TripMates: React.FC = () => {
         <HostingBox items={items}/>
         
         <div className="p-4 sm:p-8 md:p-16 gap-16 md:flex w-screen items-center justify-between bg-[#FBEBE2]">
+          <div className='py-12'>
           <TripMatesCard 
             title="Host Your Trips"
             description={descriptionText}
             imageSrc="/Vector 4858.png"
             imageAlt="Host illustration"
-          />
+          /></div>
           
           <TripMatesCard 
             title="Sign up as Traveller"
