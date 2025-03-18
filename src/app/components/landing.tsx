@@ -7,7 +7,7 @@ const HeroContent = () => {
     <div className='flex flex-col md:flex-row mt-20 md:mt-30 lg:mt-40'>
       <div className="w-[60vw] lg:ml-40 sm:w-[60vw] mx-auto md:ml-20 md:w-[40vw] md:mr-5 mt-12 text-center md:text-left gap-6">
         <h1 className="text-6xl xsm:text-7xl md:text-6xl lg:text-7xl font-affection leading-tight md:leading-normal mb-3">
-          Don't Just Follow, Travel With Them
+          Don&apos;t Just Follow, Travel With Them
         </h1>
         <p className="text-lg md:text-xl opacity-70 mb-6 md:mb-8">
           Join Exclusive Trips Curated by Your Favorite Influencers & Explore the World Together!
