@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
               <span className="block w-5 h-0.5 bg-black"></span>
             </>
           ) : (
-            <span className="text-2xl">&times;</span>
+            <span className="text-2xl bg-black mb-1">&times;</span>
           )}
         </button>
 
@@ -79,8 +79,9 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed w-full bg-white z-40 pt-16 pb-4 px-6 shadow-md md:hidden">
+        <div className="fixed w-full bg-white z-40 pt-4 pb-4 px-6 shadow-md md:hidden">
           <div className="flex flex-col gap-4">
+            <button className='text-2xl text-right' onClick={()=> setMenuOpen(false)}>&times;</button>
             {['Home', 'How it works?', 'About'].map((item) => (
               <button 
                 key={item} 
